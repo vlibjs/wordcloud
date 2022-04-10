@@ -1,5 +1,5 @@
 {
-  "name": "@vlib/wordcloud",
+  "name": "@dewfall/wordcloud",
   "version": "0.0.1",
   "description": "A vue wordcloud component based on echart5.",
   "main": "./dist/wordcloud.umd.js",
@@ -17,7 +17,7 @@
     "dev": "vitepress-fc dev --root=docs --host",
     "build": "vite build && yarn type",
     "type": "vue-tsc --declaration --emitDeclarationOnly",
-    "test": "jest",
+    "test": "echo nothing",
     "docs-build": "rimraf docs/dist && cross-env NODE_ENV=production vitepress-fc build --root=docs",
     "docs-serve": "cross-env NODE_ENV=production vitepress-fc serve --root=docs",
     "docs-build-serve": "cross-env NODE_ENV=true yarn docs-build && yarn docs-serve",

@@ -18,7 +18,7 @@ map:
 ## 安装
 
 ```
-yarn add @vlib/wordcloud
+yarn add @dewfall/wordcloud
 ```
 
 ## props
