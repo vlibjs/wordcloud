@@ -1,6 +1,6 @@
 {
   "name": "@dewfall/wordcloud",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A vue wordcloud component based on echart5.",
   "main": "./dist/wordcloud.umd.js",
   "module": "./dist/wordcloud.es.js",
