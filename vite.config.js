@@ -1,7 +1,6 @@
 // yarn build 用到的vite配置
 
 import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx';
 import { resolve } from 'path';
 
 /**
@@ -12,7 +11,7 @@ export default {
     include: [],
     exclude: [],
   },
-  plugins: [vue(), vueJsx()],
+  plugins: [vue()],
   build: {
     minify: true,
     lib: {
@@ -22,13 +21,7 @@ export default {
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: [
-        'vue',
-        'echarts',
-        'lodash-es',
-        'vue-demi',
-        'echarts-wordcloud',
-      ],
+      external: ['vue', 'echarts', 'lodash', 'vue-demi', 'echarts-wordcloud'],
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps

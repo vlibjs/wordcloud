@@ -1,9 +1,8 @@
 <script lang="ts" setup>
 import { init } from 'echarts';
-import 'echarts-wordcloud';
 import { ref, onMounted, defineProps, toRefs, watch } from 'vue-demi';
 import { WordCloudData } from './type';
-import { merge } from 'lodash-es';
+import { merge } from 'lodash';
 import { DefaultOptions } from './constants';
 
 const props = defineProps<{
@@ -15,7 +14,8 @@ const { data, options } = toRefs(props);
 
 const chartRef = ref();
 
-onMounted(() => {
+onMounted(async () => {
+  await import('echarts-wordcloud');
   const instance = init(chartRef.value);
 
   watch(
@@ -26,7 +26,7 @@ onMounted(() => {
           type: 'wordCloud',
           data: data.value,
         },
-        options.value,
+        options?.value ?? {},
         DefaultOptions,
       );
       instance.setOption({
